@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>Getting started · Mimic UI</title>
+		<link rel="icon" href="/public/mimic-mark.png" />
+		<link rel="stylesheet" href="/styles.css" />
+	</head>
+	<body>
+		<header class="topbar">
+			<a class="brand" href="/"
+				><img src="/public/mimic-mark.png" alt="" /><span
+					>mimic<span class="muted">/ui</span></span
+				></a
+			>
+			<nav><a href="/">Home</a><a href="/themes.html">Themes</a></nav>
+			<a class="github" href="/">Documentation</a>
+		</header>
+		<main class="section" style="max-width: 850px">
+			<div class="eyebrow">GETTING STARTED</div>
+			<h1 style="font-size: 54px; letter-spacing: -3px">A small first step.</h1>
+			<p class="intro">
+				Mimic UI is currently a foundation for a copy-first component library. Set up the
+				project now; add component source as your theme implementations take shape.
+			</p>
+			<h2>1. Initialize</h2>
+			<pre><code>npx @mimic-ui/cli init</code></pre>
+			<p class="intro">
+				Choose React, Angular, Vue, Svelte, or React Native. Then choose Classic, Studio, or
+				Minimal and set whether you intend to add components one by one or all together.
+			</p>
+			<h2>2. Check the registry</h2>
+			<pre><code>npx @mimic-ui/cli list</code></pre>
+			<p class="intro">
+				The MVP registry starts empty. The CLI will tell you when there are no published
+				components. It does not install CSS, packages, or framework code into your project.
+			</p>
+			<h2>3. Add a component</h2>
+			<pre><code>npx @mimic-ui/cli add button</code></pre>
+			<p class="intro">
+				Once a component is implemented and registered, the CLI copies it to the configured
+				component folder. Update <code>mimic.json</code> to change your destination paths
+				and selected theme.
+			</p>
+			<h2>Configuration</h2>
+			<pre><code>{
+  "theme": "classic",
+  "framework": "react",
+  "components": "src/components/ui",
+  "utils": "src/lib/mimic.ts"
+}</code></pre>
+			<p class="intro">
+				The <code>utils</code> field is reserved for future helper generation. No helper
+				file is created in this MVP.
+			</p>
+			<a class="text-link" href="/">← Back to Mimic UI</a>
+		</main>
+	</body>
+</html>

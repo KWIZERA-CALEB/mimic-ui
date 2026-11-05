@@ -1,0 +1,7 @@
+# Repository conventions
+
+- Keep theme implementations isolated by theme and framework in `registry/themes/`.
+- The CLI must not add global CSS, package dependencies, or framework setup automatically.
+- Update the registry manifest only for complete, copyable components.
+- Document current support accurately; empty framework directories are roadmap placeholders.
+- Run `npm run format` before committing.

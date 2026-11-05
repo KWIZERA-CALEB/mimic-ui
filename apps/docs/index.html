@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="theme-color" content="#09090d" />
+		<meta name="description" content="Mimic UI is a copy-first, themeable component library." />
+		<title>Mimic UI — Your code. Your theme.</title>
+		<link rel="icon" href="/public/mimic-mark.png" type="image/png" />
+		<link rel="stylesheet" href="/styles.css" />
+	</head>
+	<body>
+		<div class="noise"></div>
+		<header class="topbar">
+			<a class="brand" href="#top"
+				><img src="/public/mimic-mark.png" alt="" /><span
+					>mimic<span class="muted">/ui</span></span
+				></a
+			>
+			<nav>
+				<a href="#workflow">Workflow</a><a href="#themes">Themes</a><a href="#cli">CLI</a>
+			</nav>
+			<a class="github" href="https://github.com/">GitHub <span>↗</span></a>
+		</header>
+		<main id="top">
+			<section class="hero">
+				<div class="hero-copy">
+					<div class="eyebrow"><span class="pulse"></span> THE COPY-FIRST UI LIBRARY</div>
+					<h1>Your interface.<br /><span class="gradient">Your rules.</span></h1>
+					<p class="intro">
+						Components that move into your codebase, dressed in the visual language you
+						choose. No lock-in. No injected styles. Just a good place to start.
+					</p>
+					<div class="actions">
+						<a class="button primary" href="#cli">Get started <span>→</span></a
+						><a class="button secondary" href="#workflow">Explore the workflow</a>
+					</div>
+					<div class="hero-note">
+						<span class="spark">✳</span> Designed to be edited, not merely installed.
+					</div>
+				</div>
+				<div class="preview-wrap">
+					<div class="preview-glow"></div>
+					<div class="preview-window">
+						<div class="window-top">
+							<div class="dots"><i></i><i></i><i></i></div>
+							<span>your-project / components</span
+							><span class="live"><b></b> yours now</span>
+						</div>
+						<div class="preview-body">
+							<div class="code-label">BUTTON.TSX <span>✦ classic</span></div>
+							<pre><code><span class="purple">export function</span> Button({ children }) {
+    <span class="purple">return</span> (
+        &lt;<span class="cyan">button</span>
+            <span class="pink">className</span>=<span class="green">"button"</span>
+        &gt;
+            {children}
+        &lt;/<span class="cyan">button</span>&gt;
+    )
+}</code></pre>
+							<div class="preview-rule"></div>
+							<div class="sample-row">
+								<button class="sample-button">Continue <span>→</span></button
+								><span class="sample-caption">One small starting point.</span>
+							</div>
+						</div>
+					</div>
+					<div class="floating-chip chip-top"><span>⌘</span> source is yours</div>
+					<div class="floating-chip chip-bottom">
+						<span class="chip-dot"></span> theme · classic
+					</div>
+				</div>
+				<div class="hero-orb orb-a"></div>
+				<div class="hero-orb orb-b"></div>
+			</section>
+			<section class="ticker">
+				<span>THE COMPONENTS COME HOME</span><i></i><span>YOUR FRAMEWORK</span><i></i
+				><span>YOUR DESIGN SYSTEM</span><i></i><span>YOUR CODEBASE</span>
+			</section>
+			<section class="workflow section" id="workflow">
+				<div class="section-heading">
+					<div class="eyebrow">A DIFFERENT KIND OF UI LIBRARY</div>
+					<h2>Start with a spark.<br /><span class="muted">Make it yours.</span></h2>
+					<p>
+						Pick a visual direction, copy the pieces you need, then keep building with
+						code you own.
+					</p>
+				</div>
+				<div class="steps">
+					<article class="step-card">
+						<span class="step-number">01</span>
+						<div class="step-icon violet">◈</div>
+						<h3>Choose your theme</h3>
+						<p>
+							Find the component language that fits your product. Each theme can grow
+							its own look and structure.
+						</p>
+						<span class="step-foot">CLASSIC · STUDIO · MINIMAL</span>
+					</article>
+					<article class="step-card">
+						<span class="step-number">02</span>
+						<div class="step-icon blue">⌘</div>
+						<h3>Copy what you need</h3>
+						<p>
+							Use the CLI to bring selected source files right into your project,
+							where they belong.
+						</p>
+						<span class="step-foot">ONE AT A TIME OR ALL AT ONCE</span>
+					</article>
+					<article class="step-card">
+						<span class="step-number">03</span>
+						<div class="step-icon aqua">✳</div>
+						<h3>Shape the details</h3>
+						<p>
+							Change the markup, behavior, and styling to match your product. There’s
+							no black box to work around.
+						</p>
+						<span class="step-foot">YOUR CODE · YOUR CALL</span>
+					</article>
+				</div>
+			</section>
+			<section class="themes section" id="themes">
+				<div class="theme-intro">
+					<div class="eyebrow">THREE DIRECTIONS, ROOM TO GROW</div>
+					<h2>One component.<br /><span class="muted">Many personalities.</span></h2>
+					<p>
+						A calendar can feel quiet, editorial, or playful. Mimic keeps each direction
+						in its own theme so you can build the experience you have in mind.
+					</p>
+					<a class="text-link" href="/themes.html"
+						>Explore the theme system <span>↗</span></a
+					>
+				</div>
+				<div class="theme-cards">
+					<article class="theme-card classic">
+						<div class="theme-card-top"><span>01 / CLASSIC</span><span>◉</span></div>
+						<div class="mini-calendar">
+							<div class="calendar-head">October 2026 <span>‹ &nbsp; ›</span></div>
+							<div class="days">
+								<b>M</b><b>T</b><b>W</b><b>T</b><b>F</b><b>S</b><b>S</b
+								><span>12</span><span>13</span><span class="selected">14</span
+								><span>15</span><span>16</span><span>17</span><span>18</span>
+							</div>
+						</div>
+						<h3>Classic</h3>
+						<p>Clear, familiar, considered.</p>
+					</article>
+					<article class="theme-card studio">
+						<div class="theme-card-top"><span>02 / STUDIO</span><span>✳</span></div>
+						<div class="studio-preview">
+							<span>WEDNESDAY</span><strong>14</strong><span>OCTOBER 2026</span>
+							<div>← &nbsp; This week &nbsp; →</div>
+						</div>
+						<h3>Studio</h3>
+						<p>Expressive, distinct, crafted.</p>
+					</article>
+					<article class="theme-card minimal">
+						<div class="theme-card-top"><span>03 / MINIMAL</span><span>⌁</span></div>
+						<div class="minimal-preview">
+							<div>OCT <b>2026</b><span>← &nbsp; →</span></div>
+							<div class="minimal-days">
+								<span>12</span><span>13</span><b>14</b><span>15</span
+								><span>16</span>
+							</div>
+							<small>WEDNESDAY, OCTOBER 14</small>
+						</div>
+						<h3>Minimal</h3>
+						<p>Quiet, focused, lightweight.</p>
+					</article>
+					<div class="theme-caption">VISUAL CONCEPTS · COMPONENT SOURCE COMING SOON</div>
+				</div>
+			</section>
+			<section class="cli-section" id="cli">
+				<div class="cli-glow"></div>
+				<div class="cli-copy">
+					<div class="eyebrow">A FEW QUESTIONS, THEN YOU’RE IN</div>
+					<h2>Make yourself<br />at <span class="gradient">home.</span></h2>
+					<p>
+						The CLI sets your theme and framework, then helps you bring components into
+						the folders you choose.
+					</p>
+					<a class="button primary" href="/getting-started.html"
+						>Read the quick start <span>→</span></a
+					>
+				</div>
+				<div class="terminal">
+					<div class="terminal-top">
+						<div class="dots"><i></i><i></i><i></i></div>
+						<span>terminal</span><span></span>
+					</div>
+					<div class="terminal-content">
+						<div><b class="prompt">❯</b> npx @mimic-ui/cli init</div>
+						<p>Welcome to Mimic UI.</p>
+						<p><span class="check">✓</span> Which framework? <strong>React</strong></p>
+						<p><span class="check">✓</span> Choose a theme <strong>Studio</strong></p>
+						<p>
+							<span class="check">✓</span> Add components
+							<strong>One at a time</strong>
+						</p>
+						<div><b class="prompt">❯</b> <span class="cursor"></span></div>
+						<div class="terminal-hint">Your project. Your components. Your call.</div>
+					</div>
+				</div>
+			</section>
+			<section class="frameworks">
+				<div>
+					<span class="eyebrow">BUILT FOR THE WAY YOU BUILD</span>
+					<h2>Pick your stack.<br /><span class="muted">Keep your tools.</span></h2>
+				</div>
+				<div class="framework-list">
+					<span><b>Re</b> React</span><span><b>Ng</b> Angular</span
+					><span><b>V</b> Vue</span><span><b>S</b> Svelte</span
+					><span><b>◉</b> React Native</span
+					><small>FRAMEWORK ADAPTERS ARE ON THE ROADMAP</small>
+				</div>
+			</section>
+		</main>
+		<footer>
+			<a class="brand" href="#top"
+				><img src="/public/mimic-mark.png" alt="" /><span
+					>mimic<span class="muted">/ui</span></span
+				></a
+			><span>Made to be made yours.</span><span>© 2026 MIMIC UI · OPEN SOURCE</span>
+		</footer>
+	</body>
+</html>

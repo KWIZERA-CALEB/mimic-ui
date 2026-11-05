@@ -1,0 +1,20 @@
+{
+	"name": "@mimic-ui/cli",
+	"version": "0.1.0",
+	"description": "Initialize Mimic UI and copy components into your project.",
+	"type": "module",
+	"bin": {
+		"mimic": "./src/index.js"
+	},
+	"files": [
+		"src",
+		"templates"
+	],
+	"engines": {
+		"node": ">=18"
+	},
+	"scripts": {
+		"mimic": "node ./src/index.js"
+	},
+	"license": "MIT"
+}

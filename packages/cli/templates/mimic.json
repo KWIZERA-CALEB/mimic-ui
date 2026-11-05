@@ -1,0 +1,7 @@
+{
+	"$schema": "https://mimic-ui.dev/schema.json",
+	"theme": "classic",
+	"framework": "react",
+	"components": "src/components/ui",
+	"utils": "src/lib/mimic.ts"
+}

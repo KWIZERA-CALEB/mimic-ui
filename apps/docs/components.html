@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="theme-color" content="#09090d" />
+		<meta
+			name="description"
+			content="Browse the Mimic UI classic component set and preview it before copying."
+		/>
+		<title>Components · Mimic UI</title>
+		<link rel="icon" href="/public/mimic-mark.png" type="image/png" />
+		<link rel="stylesheet" href="/styles.css" />
+		<link rel="stylesheet" href="/components.css" />
+		<script src="/components.js" defer></script>
+	</head>
+	<body>
+		<div class="noise"></div>
+		<header class="topbar">
+			<a class="brand" href="/"
+				><img src="/public/mimic-mark.png" alt="" /><span
+					>mimic<span class="muted">/ui</span></span
+				></a
+			>
+			<nav>
+				<a href="/">Home</a><a class="active" href="/components.html">Components</a
+				><a href="/themes.html">Themes</a><a href="/getting-started.html">Quick start</a>
+			</nav>
+			<a class="github" href="/getting-started.html">Get started <span>↗</span></a>
+		</header>
+		<main class="catalog-main">
+			<section class="catalog-heading">
+				<div class="eyebrow">
+					<span class="pulse"></span> CLASSIC THEME · COMPONENT CATALOG
+				</div>
+				<h1>Browse the <span class="gradient">building blocks.</span></h1>
+				<p>
+					Explore the Classic set before adding it to your project. Preview each
+					component, check the API shape, and copy only the pieces you want.
+				</p>
+				<div class="catalog-count">
+					<span id="component-count">20</span> COMPONENTS <i></i> 4 FRAMEWORKS
+					<i></i> TYPESCRIPT + JAVASCRIPT
+				</div>
+			</section>
+			<section class="catalog-toolbar" aria-label="Filter components">
+				<label class="searchbox"
+					><span>⌕</span
+					><input
+						id="component-search"
+						type="search"
+						placeholder="Search components..."
+						autocomplete="off"
+					/><kbd>/</kbd></label
+				>
+				<div class="filter-group">
+					<label for="framework-filter">Framework</label
+					><select id="framework-filter">
+						<option value="react">React</option>
+						<option value="angular">Angular</option>
+						<option value="vue">Vue</option>
+						<option value="react-native">React Native</option>
+					</select>
+				</div>
+				<div class="filter-group">
+					<label for="language-filter">Source</label
+					><select id="language-filter">
+						<option value="typescript">TypeScript</option>
+						<option value="javascript">JavaScript</option>
+					</select>
+				</div>
+			</section>
+			<div class="category-pills" id="category-filters" aria-label="Filter by category"></div>
+			<section class="component-grid" id="component-grid" aria-live="polite"></section>
+			<div class="empty-state" id="empty-state" hidden>
+				No components match this search. Try another name or category.
+			</div>
+			<div class="catalog-footnote">
+				<span>THE CLASSIC THEME</span>
+				<p>
+					React components are adapted from the source set you provided. Angular and Vue
+					versions include scoped component styling. React Native components use native
+					controls and <code>StyleSheet</code>. JavaScript selections are transpiled from
+					typed source by the CLI.
+				</p>
+			</div>
+		</main>
+		<dialog class="component-dialog" id="component-dialog" aria-labelledby="detail-title">
+			<div class="detail-top">
+				<div>
+					<div class="eyebrow" id="detail-category"></div>
+					<h2 id="detail-title"></h2>
+				</div>
+				<button class="detail-close" id="detail-close" aria-label="Close component details">
+					×
+				</button>
+			</div>
+			<p class="detail-description" id="detail-description"></p>
+			<div class="detail-controls">
+				<label
+					>Framework<select id="detail-framework">
+						<option value="react">React</option>
+						<option value="angular">Angular</option>
+						<option value="vue">Vue</option>
+						<option value="react-native">React Native</option>
+					</select></label
+				><label
+					>Language<select id="detail-language">
+						<option value="typescript">TypeScript</option>
+						<option value="javascript">JavaScript</option>
+					</select></label
+				>
+			</div>
+			<div class="detail-columns">
+				<section class="detail-preview">
+					<div class="preview-label">COMPONENT PREVIEW <span>CLASSIC</span></div>
+					<div id="detail-preview" class="detail-preview-stage"></div>
+				</section>
+				<section class="detail-code">
+					<div class="preview-label">
+						USAGE <button id="copy-usage" type="button">Copy snippet</button>
+					</div>
+					<pre><code id="detail-code"></code></pre>
+				</section>
+			</div>
+			<div class="detail-footer">
+				<code id="detail-command">mimic add</code
+				><button class="button primary" id="copy-command" type="button">
+					Copy add command <span>→</span>
+				</button>
+			</div>
+		</dialog>
+		<footer>
+			<a class="brand" href="/"
+				><img src="/public/mimic-mark.png" alt="" /><span
+					>mimic<span class="muted">/ui</span></span
+				></a
+			><span>Made to be made yours.</span><span>CLASSIC · 2026</span>
+		</footer>
+	</body>
+</html>

@@ -4,34 +4,50 @@
 
 # Mimic UI
 
-**A UI library that moves into your codebase.**
+**Copy-first components. Your code, your theme.**
 
-Choose a visual theme, copy the components you need, and shape them for your product.
-No runtime package. No injected stylesheet.
+Choose a visual theme, preview components, and copy the source into your own project.
+The first component set is **Classic**, with React, Angular, Vue, and React Native implementations.
 
-[Documentation](apps/docs/README.md) · [CLI](#cli) · [Themes](#themes)
+[Browse components](apps/docs/components.html) · [Quick start](apps/docs/getting-started.html) · [CLI](#cli)
 
 </div>
 
 ## What is Mimic UI?
 
-Mimic UI is a framework-aware component registry and command line tool. It follows a copy-into-your-project workflow: component source belongs to your application and can be edited directly. Themes define component appearance and structure. The library does not add global CSS to projects.
+Mimic UI is a framework-aware component registry and CLI. Components are copied into your application, where you can edit them directly. Each component is framework-native. Mimic does not inject a global stylesheet into consumer projects.
 
-This repository is an MVP foundation. Theme and framework directories are ready for implementations; the registry currently ships no components.
+Classic currently includes 20 components. React components preserve the supplied React source, while Angular, Vue, and React Native have framework-specific implementations. The CLI can provide TypeScript or transpile the typed sources into JavaScript.
 
 ## Quick start
 
-Requires Node.js 18 or newer. Clone this repository, install dependencies, then run the local CLI from the project you want to configure:
+Requires Node.js 18 or newer. Clone this repository and install the CLI workspace dependencies. From the consumer project, run the CLI entry point:
 
 ```sh
+cd path/to/mimic_ui
 npm install
 cd path/to/your-project
 node path/to/mimic_ui/packages/cli/src/index.js init
+node path/to/mimic_ui/packages/cli/src/index.js add button
 ```
 
-The CLI asks for your framework, visual theme, and whether you plan to add all available components or pick them individually. It writes `mimic.json`. The registry is currently empty, so `list` and `add` explain that no components have been published yet.
+The setup asks for framework, language, theme, and whether to add all components or choose individually. It writes `mimic.json` in the current project.
 
-Framework targets planned for the registry: React, Angular, Vue, Svelte, and React Native. A target is a planned slot, not a claim that implementations already exist.
+After publishing `@mimic-ui/cli` to npm, the equivalent commands will be:
+
+```sh
+npx @mimic-ui/cli init
+npx @mimic-ui/cli add button
+```
+
+## Supported Classic targets
+
+- **React:** TypeScript or JavaScript. React components use Tailwind CSS 4 utility classes and require Radix UI, Lucide, CVA, `clsx`, and `tailwind-merge` as shown by the CLI. Mimic does not edit your global stylesheet.
+- **Angular:** TypeScript or JavaScript output with component-scoped styles. Angular's JavaScript output is intended for JIT projects; Angular AOT projects should use TypeScript.
+- **Vue:** TypeScript or JavaScript single-file components with scoped styles.
+- **React Native:** TypeScript or JavaScript source using native controls and `StyleSheet`.
+
+Other themes remain available as authoring placeholders. The current registry only serves Classic.
 
 ## Configuration
 
@@ -40,72 +56,54 @@ Framework targets planned for the registry: React, Angular, Vue, Svelte, and Rea
 	"$schema": "https://mimic-ui.dev/schema.json",
 	"theme": "classic",
 	"framework": "react",
+	"language": "typescript",
 	"components": "src/components/ui",
-	"utils": "src/lib/mimic.ts",
 	"installMode": "individual"
 }
 ```
 
-`theme` selects the source variation. `framework` selects its framework implementation. `components` is the destination for copied files. `utils` is reserved for future helper generation; the CLI does not generate utilities or styles yet.
-
-## Themes
-
-- **Classic** — a familiar, balanced foundation.
-- **Studio** — a more expressive design direction.
-- **Minimal** — a restrained visual language.
-
-These are names and extension points. Add authored component source under `registry/themes/<theme>/<framework>/`, then make completed files available to the CLI in `packages/cli/templates/components/`.
+`theme`, `framework`, and `language` select the registry source. `components` sets the destination folder. `installMode` controls whether `mimic add` selects one component or all available components.
 
 ## CLI
 
-From the repository root:
-
 ```sh
-npm run cli -- init
-npm run cli -- list
-npm run cli -- add button
+mimic init                 # choose framework, language, theme, and install preference
+mimic list                 # list components and framework targets
+mimic add button           # copy one component
+mimic add                  # add all or choose one based on your preference
+mimic add all              # always copy every available component
 ```
 
-After publishing `@mimic-ui/cli` to npm, the equivalent consumer commands will be:
+The CLI copies source only. It reports the required framework packages but does not install them or change global CSS. It prompts before replacing existing files.
 
-```sh
-npx @mimic-ui/cli init
-npx @mimic-ui/cli list
-npx @mimic-ui/cli add button
-```
+## Documentation website
 
-To publish a component, add its copyable source to `packages/cli/templates/components/<theme>/<framework>/` and register it in `packages/cli/templates/registry.json`. Keep components self-contained and avoid global CSS. Do not register a framework/theme pair until its implementation exists.
+Run `npm run docs:dev`, then open the local URL shown in the terminal. Browse the [Classic component catalog](apps/docs/components.html) to filter by category, preview each component, switch framework and language snippets, and copy its CLI command.
 
 ## Repository layout
 
 ```text
-apps/docs/                 Documentation website
-packages/cli/              CLI and copyable source registry
-registry/themes/            Authoring space for theme implementations
-templates/                  Future starter projects
-.cursor/rules/              Cursor project guidance
-.claude/rules/              Claude project guidance
+apps/docs/                  Documentation website and component catalog
+packages/cli/               CLI and packaged component sources
+registry/themes/classic/     Theme source of truth
+scripts/sync-registry.mjs    Syncs theme sources into the CLI package
+templates/                   Future starter projects
+.cursor/rules/               Cursor project guidance
+.claude/rules/               Claude project guidance
 ```
 
 ## Development
 
 ```sh
-npm install
-npm run cli -- --help
-npm run docs:dev
-npm run format
-npm run format:check
+pnpm install
+pnpm run registry:sync
+pnpm run cli -- --help
+pnpm run docs:dev
+pnpm run format
+pnpm run format:check
 ```
 
-`npm run format` formats project source with Prettier using tabs and a four-column tab width. Formatting configuration is centralized at the repository root.
-
-## Roadmap
-
-1. Build and document component implementations for each theme and framework.
-2. Add registry metadata, dependency declarations, and safe file conflict handling.
-3. Add framework detection and framework-specific starter templates.
-4. Add searchable docs pages with live examples as components become available.
-5. Add React Native component guidance and examples.
+Prettier uses tabs with a four-column tab width. Run `pnpm run registry:sync` after editing theme source so the CLI package stays aligned.
 
 ## Contributing
 

@@ -1,3 +1,824 @@
 {
-	"components": []
+	"components": [
+		{
+			"name": "alert",
+			"title": "Alert",
+			"category": "Feedback",
+			"description": "Contextual status message with an optional action.",
+			"frameworks": {
+				"react": {
+					"source": "classic/react/typescript/components/alert.tsx",
+					"language": "typescript",
+					"output": "alert.tsx",
+					"helpers": ["classic/react/typescript/components/utils.ts"],
+					"dependencies": [
+						"radix-ui",
+						"lucide-react",
+						"class-variance-authority",
+						"tailwindcss",
+						"clsx",
+						"tailwind-merge"
+					]
+				},
+				"angular": {
+					"source": "classic/angular/typescript/components/alert.component.ts",
+					"language": "typescript",
+					"output": "alert.component.ts",
+					"dependencies": ["@angular/common", "@angular/core"]
+				},
+				"vue": {
+					"source": "classic/vue/typescript/components/alert.vue",
+					"language": "typescript",
+					"output": "alert.vue",
+					"dependencies": ["vue"]
+				},
+				"react-native": {
+					"source": "classic/react-native/typescript/components/alert.tsx",
+					"language": "typescript",
+					"output": "alert.tsx",
+					"dependencies": ["react-native"]
+				}
+			},
+			"theme": "classic"
+		},
+		{
+			"name": "avatar",
+			"title": "Avatar",
+			"category": "Display",
+			"description": "Profile image with fallback and grouping primitives.",
+			"frameworks": {
+				"react": {
+					"source": "classic/react/typescript/components/avatar.tsx",
+					"language": "typescript",
+					"output": "avatar.tsx",
+					"helpers": ["classic/react/typescript/components/utils.ts"],
+					"dependencies": [
+						"radix-ui",
+						"lucide-react",
+						"class-variance-authority",
+						"tailwindcss",
+						"clsx",
+						"tailwind-merge"
+					]
+				},
+				"angular": {
+					"source": "classic/angular/typescript/components/avatar.component.ts",
+					"language": "typescript",
+					"output": "avatar.component.ts",
+					"dependencies": ["@angular/common", "@angular/core"]
+				},
+				"vue": {
+					"source": "classic/vue/typescript/components/avatar.vue",
+					"language": "typescript",
+					"output": "avatar.vue",
+					"dependencies": ["vue"]
+				},
+				"react-native": {
+					"source": "classic/react-native/typescript/components/avatar.tsx",
+					"language": "typescript",
+					"output": "avatar.tsx",
+					"dependencies": ["react-native"]
+				}
+			},
+			"theme": "classic"
+		},
+		{
+			"name": "badge",
+			"title": "Badge",
+			"category": "Display",
+			"description": "Compact label with emphasis variants and counters.",
+			"frameworks": {
+				"react": {
+					"source": "classic/react/typescript/components/badge.tsx",
+					"language": "typescript",
+					"output": "badge.tsx",
+					"helpers": ["classic/react/typescript/components/utils.ts"],
+					"dependencies": [
+						"radix-ui",
+						"lucide-react",
+						"class-variance-authority",
+						"tailwindcss",
+						"clsx",
+						"tailwind-merge"
+					]
+				},
+				"angular": {
+					"source": "classic/angular/typescript/components/badge.component.ts",
+					"language": "typescript",
+					"output": "badge.component.ts",
+					"dependencies": ["@angular/common", "@angular/core"]
+				},
+				"vue": {
+					"source": "classic/vue/typescript/components/badge.vue",
+					"language": "typescript",
+					"output": "badge.vue",
+					"dependencies": ["vue"]
+				},
+				"react-native": {
+					"source": "classic/react-native/typescript/components/badge.tsx",
+					"language": "typescript",
+					"output": "badge.tsx",
+					"dependencies": ["react-native"]
+				}
+			},
+			"theme": "classic"
+		},
+		{
+			"name": "button",
+			"title": "Button",
+			"category": "Actions",
+			"description": "Primary, secondary, outline, icon, and loading states.",
+			"frameworks": {
+				"react": {
+					"source": "classic/react/typescript/components/button.tsx",
+					"language": "typescript",
+					"output": "button.tsx",
+					"helpers": ["classic/react/typescript/components/utils.ts"],
+					"dependencies": [
+						"radix-ui",
+						"lucide-react",
+						"class-variance-authority",
+						"tailwindcss",
+						"clsx",
+						"tailwind-merge"
+					]
+				},
+				"angular": {
+					"source": "classic/angular/typescript/components/button.component.ts",
+					"language": "typescript",
+					"output": "button.component.ts",
+					"dependencies": ["@angular/common", "@angular/core"]
+				},
+				"vue": {
+					"source": "classic/vue/typescript/components/button.vue",
+					"language": "typescript",
+					"output": "button.vue",
+					"dependencies": ["vue"]
+				},
+				"react-native": {
+					"source": "classic/react-native/typescript/components/button.tsx",
+					"language": "typescript",
+					"output": "button.tsx",
+					"dependencies": ["react-native"]
+				}
+			},
+			"theme": "classic"
+		},
+		{
+			"name": "card",
+			"title": "Card",
+			"category": "Layout",
+			"description": "Composable surface with header, body, and footer slots.",
+			"frameworks": {
+				"react": {
+					"source": "classic/react/typescript/components/card.tsx",
+					"language": "typescript",
+					"output": "card.tsx",
+					"helpers": ["classic/react/typescript/components/utils.ts"],
+					"dependencies": [
+						"radix-ui",
+						"lucide-react",
+						"class-variance-authority",
+						"tailwindcss",
+						"clsx",
+						"tailwind-merge"
+					]
+				},
+				"angular": {
+					"source": "classic/angular/typescript/components/card.component.ts",
+					"language": "typescript",
+					"output": "card.component.ts",
+					"dependencies": ["@angular/common", "@angular/core"]
+				},
+				"vue": {
+					"source": "classic/vue/typescript/components/card.vue",
+					"language": "typescript",
+					"output": "card.vue",
+					"dependencies": ["vue"]
+				},
+				"react-native": {
+					"source": "classic/react-native/typescript/components/card.tsx",
+					"language": "typescript",
+					"output": "card.tsx",
+					"dependencies": ["react-native"]
+				}
+			},
+			"theme": "classic"
+		},
+		{
+			"name": "checkbox",
+			"title": "Checkbox",
+			"category": "Forms",
+			"description": "Accessible checked and indeterminate control.",
+			"frameworks": {
+				"react": {
+					"source": "classic/react/typescript/components/checkbox.tsx",
+					"language": "typescript",
+					"output": "checkbox.tsx",
+					"helpers": ["classic/react/typescript/components/utils.ts"],
+					"dependencies": [
+						"radix-ui",
+						"lucide-react",
+						"class-variance-authority",
+						"tailwindcss",
+						"clsx",
+						"tailwind-merge"
+					]
+				},
+				"angular": {
+					"source": "classic/angular/typescript/components/checkbox.component.ts",
+					"language": "typescript",
+					"output": "checkbox.component.ts",
+					"dependencies": ["@angular/common", "@angular/core"]
+				},
+				"vue": {
+					"source": "classic/vue/typescript/components/checkbox.vue",
+					"language": "typescript",
+					"output": "checkbox.vue",
+					"dependencies": ["vue"]
+				},
+				"react-native": {
+					"source": "classic/react-native/typescript/components/checkbox.tsx",
+					"language": "typescript",
+					"output": "checkbox.tsx",
+					"dependencies": ["react-native"]
+				}
+			},
+			"theme": "classic"
+		},
+		{
+			"name": "dialog",
+			"title": "Dialog",
+			"category": "Overlays",
+			"description": "Modal surface with trigger, title, and description.",
+			"frameworks": {
+				"react": {
+					"source": "classic/react/typescript/components/dialog.tsx",
+					"language": "typescript",
+					"output": "dialog.tsx",
+					"helpers": ["classic/react/typescript/components/utils.ts"],
+					"dependencies": [
+						"radix-ui",
+						"lucide-react",
+						"class-variance-authority",
+						"tailwindcss",
+						"clsx",
+						"tailwind-merge"
+					]
+				},
+				"angular": {
+					"source": "classic/angular/typescript/components/dialog.component.ts",
+					"language": "typescript",
+					"output": "dialog.component.ts",
+					"dependencies": ["@angular/common", "@angular/core"]
+				},
+				"vue": {
+					"source": "classic/vue/typescript/components/dialog.vue",
+					"language": "typescript",
+					"output": "dialog.vue",
+					"dependencies": ["vue"]
+				},
+				"react-native": {
+					"source": "classic/react-native/typescript/components/dialog.tsx",
+					"language": "typescript",
+					"output": "dialog.tsx",
+					"dependencies": ["react-native"]
+				}
+			},
+			"theme": "classic"
+		},
+		{
+			"name": "dropdown-menu",
+			"title": "Dropdown menu",
+			"category": "Overlays",
+			"description": "Anchored action list with selection and shortcut slots.",
+			"frameworks": {
+				"react": {
+					"source": "classic/react/typescript/components/dropdown-menu.tsx",
+					"language": "typescript",
+					"output": "dropdown-menu.tsx",
+					"helpers": ["classic/react/typescript/components/utils.ts"],
+					"dependencies": [
+						"radix-ui",
+						"lucide-react",
+						"class-variance-authority",
+						"tailwindcss",
+						"clsx",
+						"tailwind-merge"
+					]
+				},
+				"angular": {
+					"source": "classic/angular/typescript/components/dropdown-menu.component.ts",
+					"language": "typescript",
+					"output": "dropdown-menu.component.ts",
+					"dependencies": ["@angular/common", "@angular/core"]
+				},
+				"vue": {
+					"source": "classic/vue/typescript/components/dropdown-menu.vue",
+					"language": "typescript",
+					"output": "dropdown-menu.vue",
+					"dependencies": ["vue"]
+				},
+				"react-native": {
+					"source": "classic/react-native/typescript/components/dropdown-menu.tsx",
+					"language": "typescript",
+					"output": "dropdown-menu.tsx",
+					"dependencies": ["react-native"]
+				}
+			},
+			"theme": "classic"
+		},
+		{
+			"name": "input",
+			"title": "Input",
+			"category": "Forms",
+			"description": "Single-line text field with validation states.",
+			"frameworks": {
+				"react": {
+					"source": "classic/react/typescript/components/input.tsx",
+					"language": "typescript",
+					"output": "input.tsx",
+					"helpers": ["classic/react/typescript/components/utils.ts"],
+					"dependencies": [
+						"radix-ui",
+						"lucide-react",
+						"class-variance-authority",
+						"tailwindcss",
+						"clsx",
+						"tailwind-merge"
+					]
+				},
+				"angular": {
+					"source": "classic/angular/typescript/components/input.component.ts",
+					"language": "typescript",
+					"output": "input.component.ts",
+					"dependencies": ["@angular/common", "@angular/core"]
+				},
+				"vue": {
+					"source": "classic/vue/typescript/components/input.vue",
+					"language": "typescript",
+					"output": "input.vue",
+					"dependencies": ["vue"]
+				},
+				"react-native": {
+					"source": "classic/react-native/typescript/components/input.tsx",
+					"language": "typescript",
+					"output": "input.tsx",
+					"dependencies": ["react-native"]
+				}
+			},
+			"theme": "classic"
+		},
+		{
+			"name": "label",
+			"title": "Label",
+			"category": "Forms",
+			"description": "Form label with required state.",
+			"frameworks": {
+				"react": {
+					"source": "classic/react/typescript/components/label.tsx",
+					"language": "typescript",
+					"output": "label.tsx",
+					"helpers": ["classic/react/typescript/components/utils.ts"],
+					"dependencies": [
+						"radix-ui",
+						"lucide-react",
+						"class-variance-authority",
+						"tailwindcss",
+						"clsx",
+						"tailwind-merge"
+					]
+				},
+				"angular": {
+					"source": "classic/angular/typescript/components/label.component.ts",
+					"language": "typescript",
+					"output": "label.component.ts",
+					"dependencies": ["@angular/common", "@angular/core"]
+				},
+				"vue": {
+					"source": "classic/vue/typescript/components/label.vue",
+					"language": "typescript",
+					"output": "label.vue",
+					"dependencies": ["vue"]
+				},
+				"react-native": {
+					"source": "classic/react-native/typescript/components/label.tsx",
+					"language": "typescript",
+					"output": "label.tsx",
+					"dependencies": ["react-native"]
+				}
+			},
+			"theme": "classic"
+		},
+		{
+			"name": "loader",
+			"title": "Loader",
+			"category": "Feedback",
+			"description": "Spinner with compact, centered, and labeled states.",
+			"frameworks": {
+				"react": {
+					"source": "classic/react/typescript/components/loader.tsx",
+					"language": "typescript",
+					"output": "loader.tsx",
+					"helpers": ["classic/react/typescript/components/utils.ts"],
+					"dependencies": [
+						"radix-ui",
+						"lucide-react",
+						"class-variance-authority",
+						"tailwindcss",
+						"clsx",
+						"tailwind-merge"
+					]
+				},
+				"angular": {
+					"source": "classic/angular/typescript/components/loader.component.ts",
+					"language": "typescript",
+					"output": "loader.component.ts",
+					"dependencies": ["@angular/common", "@angular/core"]
+				},
+				"vue": {
+					"source": "classic/vue/typescript/components/loader.vue",
+					"language": "typescript",
+					"output": "loader.vue",
+					"dependencies": ["vue"]
+				},
+				"react-native": {
+					"source": "classic/react-native/typescript/components/loader.tsx",
+					"language": "typescript",
+					"output": "loader.tsx",
+					"dependencies": ["react-native"]
+				}
+			},
+			"theme": "classic"
+		},
+		{
+			"name": "pagination",
+			"title": "Pagination",
+			"category": "Navigation",
+			"description": "Page controls with current-page state.",
+			"frameworks": {
+				"react": {
+					"source": "classic/react/typescript/components/pagination.tsx",
+					"language": "typescript",
+					"output": "pagination.tsx",
+					"helpers": ["classic/react/typescript/components/utils.ts"],
+					"dependencies": [
+						"radix-ui",
+						"lucide-react",
+						"class-variance-authority",
+						"tailwindcss",
+						"clsx",
+						"tailwind-merge"
+					]
+				},
+				"angular": {
+					"source": "classic/angular/typescript/components/pagination.component.ts",
+					"language": "typescript",
+					"output": "pagination.component.ts",
+					"dependencies": ["@angular/common", "@angular/core"]
+				},
+				"vue": {
+					"source": "classic/vue/typescript/components/pagination.vue",
+					"language": "typescript",
+					"output": "pagination.vue",
+					"dependencies": ["vue"]
+				},
+				"react-native": {
+					"source": "classic/react-native/typescript/components/pagination.tsx",
+					"language": "typescript",
+					"output": "pagination.tsx",
+					"dependencies": ["react-native"]
+				}
+			},
+			"theme": "classic"
+		},
+		{
+			"name": "select",
+			"title": "Select",
+			"category": "Forms",
+			"description": "Grouped option selector with a clear trigger state.",
+			"frameworks": {
+				"react": {
+					"source": "classic/react/typescript/components/select.tsx",
+					"language": "typescript",
+					"output": "select.tsx",
+					"helpers": ["classic/react/typescript/components/utils.ts"],
+					"dependencies": [
+						"radix-ui",
+						"lucide-react",
+						"class-variance-authority",
+						"tailwindcss",
+						"clsx",
+						"tailwind-merge"
+					]
+				},
+				"angular": {
+					"source": "classic/angular/typescript/components/select.component.ts",
+					"language": "typescript",
+					"output": "select.component.ts",
+					"dependencies": ["@angular/common", "@angular/core"]
+				},
+				"vue": {
+					"source": "classic/vue/typescript/components/select.vue",
+					"language": "typescript",
+					"output": "select.vue",
+					"dependencies": ["vue"]
+				},
+				"react-native": {
+					"source": "classic/react-native/typescript/components/select.tsx",
+					"language": "typescript",
+					"output": "select.tsx",
+					"dependencies": ["react-native"]
+				}
+			},
+			"theme": "classic"
+		},
+		{
+			"name": "separator",
+			"title": "Separator",
+			"category": "Layout",
+			"description": "Horizontal or vertical divider with variants.",
+			"frameworks": {
+				"react": {
+					"source": "classic/react/typescript/components/separator.tsx",
+					"language": "typescript",
+					"output": "separator.tsx",
+					"helpers": ["classic/react/typescript/components/utils.ts"],
+					"dependencies": [
+						"radix-ui",
+						"lucide-react",
+						"class-variance-authority",
+						"tailwindcss",
+						"clsx",
+						"tailwind-merge"
+					]
+				},
+				"angular": {
+					"source": "classic/angular/typescript/components/separator.component.ts",
+					"language": "typescript",
+					"output": "separator.component.ts",
+					"dependencies": ["@angular/common", "@angular/core"]
+				},
+				"vue": {
+					"source": "classic/vue/typescript/components/separator.vue",
+					"language": "typescript",
+					"output": "separator.vue",
+					"dependencies": ["vue"]
+				},
+				"react-native": {
+					"source": "classic/react-native/typescript/components/separator.tsx",
+					"language": "typescript",
+					"output": "separator.tsx",
+					"dependencies": ["react-native"]
+				}
+			},
+			"theme": "classic"
+		},
+		{
+			"name": "skeleton",
+			"title": "Skeleton",
+			"category": "Feedback",
+			"description": "Loading placeholder for content and avatars.",
+			"frameworks": {
+				"react": {
+					"source": "classic/react/typescript/components/skeleton.tsx",
+					"language": "typescript",
+					"output": "skeleton.tsx",
+					"helpers": ["classic/react/typescript/components/utils.ts"],
+					"dependencies": [
+						"radix-ui",
+						"lucide-react",
+						"class-variance-authority",
+						"tailwindcss",
+						"clsx",
+						"tailwind-merge"
+					]
+				},
+				"angular": {
+					"source": "classic/angular/typescript/components/skeleton.component.ts",
+					"language": "typescript",
+					"output": "skeleton.component.ts",
+					"dependencies": ["@angular/common", "@angular/core"]
+				},
+				"vue": {
+					"source": "classic/vue/typescript/components/skeleton.vue",
+					"language": "typescript",
+					"output": "skeleton.vue",
+					"dependencies": ["vue"]
+				},
+				"react-native": {
+					"source": "classic/react-native/typescript/components/skeleton.tsx",
+					"language": "typescript",
+					"output": "skeleton.tsx",
+					"dependencies": ["react-native"]
+				}
+			},
+			"theme": "classic"
+		},
+		{
+			"name": "table",
+			"title": "Table",
+			"category": "Data display",
+			"description": "Composable table with sortable header primitives.",
+			"frameworks": {
+				"react": {
+					"source": "classic/react/typescript/components/table.tsx",
+					"language": "typescript",
+					"output": "table.tsx",
+					"helpers": ["classic/react/typescript/components/utils.ts"],
+					"dependencies": [
+						"radix-ui",
+						"lucide-react",
+						"class-variance-authority",
+						"tailwindcss",
+						"clsx",
+						"tailwind-merge"
+					]
+				},
+				"angular": {
+					"source": "classic/angular/typescript/components/table.component.ts",
+					"language": "typescript",
+					"output": "table.component.ts",
+					"dependencies": ["@angular/common", "@angular/core"]
+				},
+				"vue": {
+					"source": "classic/vue/typescript/components/table.vue",
+					"language": "typescript",
+					"output": "table.vue",
+					"dependencies": ["vue"]
+				},
+				"react-native": {
+					"source": "classic/react-native/typescript/components/table.tsx",
+					"language": "typescript",
+					"output": "table.tsx",
+					"dependencies": ["react-native"]
+				}
+			},
+			"theme": "classic"
+		},
+		{
+			"name": "tabs",
+			"title": "Tabs",
+			"category": "Navigation",
+			"description": "Tabbed navigation with selected panel.",
+			"frameworks": {
+				"react": {
+					"source": "classic/react/typescript/components/tabs.tsx",
+					"language": "typescript",
+					"output": "tabs.tsx",
+					"helpers": ["classic/react/typescript/components/utils.ts"],
+					"dependencies": [
+						"radix-ui",
+						"lucide-react",
+						"class-variance-authority",
+						"tailwindcss",
+						"clsx",
+						"tailwind-merge"
+					]
+				},
+				"angular": {
+					"source": "classic/angular/typescript/components/tabs.component.ts",
+					"language": "typescript",
+					"output": "tabs.component.ts",
+					"dependencies": ["@angular/common", "@angular/core"]
+				},
+				"vue": {
+					"source": "classic/vue/typescript/components/tabs.vue",
+					"language": "typescript",
+					"output": "tabs.vue",
+					"dependencies": ["vue"]
+				},
+				"react-native": {
+					"source": "classic/react-native/typescript/components/tabs.tsx",
+					"language": "typescript",
+					"output": "tabs.tsx",
+					"dependencies": ["react-native"]
+				}
+			},
+			"theme": "classic"
+		},
+		{
+			"name": "tag",
+			"title": "Tag",
+			"category": "Display",
+			"description": "Removable label for filters and selected values.",
+			"frameworks": {
+				"react": {
+					"source": "classic/react/typescript/components/tag.tsx",
+					"language": "typescript",
+					"output": "tag.tsx",
+					"helpers": ["classic/react/typescript/components/utils.ts"],
+					"dependencies": [
+						"radix-ui",
+						"lucide-react",
+						"class-variance-authority",
+						"tailwindcss",
+						"clsx",
+						"tailwind-merge"
+					]
+				},
+				"angular": {
+					"source": "classic/angular/typescript/components/tag.component.ts",
+					"language": "typescript",
+					"output": "tag.component.ts",
+					"dependencies": ["@angular/common", "@angular/core"]
+				},
+				"vue": {
+					"source": "classic/vue/typescript/components/tag.vue",
+					"language": "typescript",
+					"output": "tag.vue",
+					"dependencies": ["vue"]
+				},
+				"react-native": {
+					"source": "classic/react-native/typescript/components/tag.tsx",
+					"language": "typescript",
+					"output": "tag.tsx",
+					"dependencies": ["react-native"]
+				}
+			},
+			"theme": "classic"
+		},
+		{
+			"name": "textarea",
+			"title": "Textarea",
+			"category": "Forms",
+			"description": "Multiline field with optional character count.",
+			"frameworks": {
+				"react": {
+					"source": "classic/react/typescript/components/textarea.tsx",
+					"language": "typescript",
+					"output": "textarea.tsx",
+					"helpers": ["classic/react/typescript/components/utils.ts"],
+					"dependencies": [
+						"radix-ui",
+						"lucide-react",
+						"class-variance-authority",
+						"tailwindcss",
+						"clsx",
+						"tailwind-merge"
+					]
+				},
+				"angular": {
+					"source": "classic/angular/typescript/components/textarea.component.ts",
+					"language": "typescript",
+					"output": "textarea.component.ts",
+					"dependencies": ["@angular/common", "@angular/core"]
+				},
+				"vue": {
+					"source": "classic/vue/typescript/components/textarea.vue",
+					"language": "typescript",
+					"output": "textarea.vue",
+					"dependencies": ["vue"]
+				},
+				"react-native": {
+					"source": "classic/react-native/typescript/components/textarea.tsx",
+					"language": "typescript",
+					"output": "textarea.tsx",
+					"dependencies": ["react-native"]
+				}
+			},
+			"theme": "classic"
+		},
+		{
+			"name": "toast",
+			"title": "Toast",
+			"category": "Feedback",
+			"description": "Dismissible status notice with live announcements.",
+			"frameworks": {
+				"react": {
+					"source": "classic/react/typescript/components/toast.tsx",
+					"language": "typescript",
+					"output": "toast.tsx",
+					"helpers": ["classic/react/typescript/components/utils.ts"],
+					"dependencies": [
+						"radix-ui",
+						"lucide-react",
+						"class-variance-authority",
+						"tailwindcss",
+						"clsx",
+						"tailwind-merge"
+					]
+				},
+				"angular": {
+					"source": "classic/angular/typescript/components/toast.component.ts",
+					"language": "typescript",
+					"output": "toast.component.ts",
+					"dependencies": ["@angular/common", "@angular/core"]
+				},
+				"vue": {
+					"source": "classic/vue/typescript/components/toast.vue",
+					"language": "typescript",
+					"output": "toast.vue",
+					"dependencies": ["vue"]
+				},
+				"react-native": {
+					"source": "classic/react-native/typescript/components/toast.tsx",
+					"language": "typescript",
+					"output": "toast.tsx",
+					"dependencies": ["react-native"]
+				}
+			},
+			"theme": "classic"
+		}
+	]
 }

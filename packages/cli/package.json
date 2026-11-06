@@ -16,5 +16,8 @@
 	"scripts": {
 		"mimic": "node ./src/index.js"
 	},
-	"license": "MIT"
+	"license": "MIT",
+	"dependencies": {
+		"typescript": "^5.9.3"
+	}
 }

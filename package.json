@@ -10,11 +10,12 @@
 		"apps/*"
 	],
 	"scripts": {
-		"format": "prettier --write \"**/*.{js,jsx,mjs,cjs,ts,tsx,mts,cts,json,md,mdx,css,scss,html,yml,yaml}\" --tab-width 4 --use-tabs && prettier --write \".cursor/rules/*.mdc\" --parser markdown --tab-width 4 --use-tabs",
-		"format:check": "prettier --check \"**/*.{js,jsx,mjs,cjs,ts,tsx,mts,cts,json,md,mdx,css,scss,html,yml,yaml}\" --tab-width 4 --use-tabs && prettier --check \".cursor/rules/*.mdc\" --parser markdown --tab-width 4 --use-tabs",
+		"format": "prettier --write \"**/*.{js,jsx,mjs,cjs,ts,tsx,mts,cts,json,md,mdx,css,scss,html,vue,yml,yaml}\" --tab-width 4 --use-tabs && prettier --write \".cursor/rules/*.mdc\" --parser markdown --tab-width 4 --use-tabs",
+		"format:check": "prettier --check \"**/*.{js,jsx,mjs,cjs,ts,tsx,mts,cts,json,md,mdx,css,scss,html,vue,yml,yaml}\" --tab-width 4 --use-tabs && prettier --check \".cursor/rules/*.mdc\" --parser markdown --tab-width 4 --use-tabs",
 		"docs:dev": "npm --workspace @mimic-ui/docs run dev",
 		"cli": "node packages/cli/src/index.js",
-		"cli:link": "npm --workspace @mimic-ui/cli link"
+		"cli:link": "npm --workspace @mimic-ui/cli link",
+		"registry:sync": "node scripts/sync-registry.mjs"
 	},
 	"devDependencies": {
 		"prettier": "^3.6.2"

@@ -3,5 +3,6 @@
 	"theme": "classic",
 	"framework": "react",
 	"components": "src/components/ui",
-	"utils": "src/lib/mimic.ts"
+	"utils": "src/lib/mimic.ts",
+	"language": "typescript"
 }

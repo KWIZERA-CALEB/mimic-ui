@@ -1,7 +1,7 @@
-# Mimic UI docs
+# Mimic UI documentation
 
-A lightweight static documentation site for the Mimic UI MVP. It uses plain HTML and CSS so it can be hosted on any static host. No CSS is injected into consuming projects.
+A lightweight static website that explains the copy-first workflow and lets users browse the Classic component set before installing it.
 
-Run from the repository root with `npm run docs:dev`, or serve this folder with any static file server.
+Run from the repository root with `pnpm run docs:dev`. The component catalog includes category search, framework and language selectors, component previews, usage snippets, and copyable CLI commands.
 
-Current pages explain the workflow and theme concepts. Component source is an extension point and is not published yet.
+Classic currently contains 20 components for React, Angular, Vue, and React Native. React source uses Tailwind CSS 4 and the dependencies listed by the CLI. Angular and Vue styles are component-scoped. React Native uses native controls and `StyleSheet`.

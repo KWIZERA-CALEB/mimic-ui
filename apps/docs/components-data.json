@@ -1,0 +1,282 @@
+[
+	{
+		"name": "alert",
+		"title": "Alert",
+		"category": "Feedback",
+		"description": "Contextual status message with an optional action.",
+		"exports": "Alert",
+		"preview": "<div class='sample-alert'><b>Profile updated</b><span>Your changes have been saved.</span></div>",
+		"snippets": {
+			"react": "import { Alert } from '@/components/ui/alert';\n\n<Alert variant=\"success\" title=\"Profile updated\">Your changes have been saved.</Alert>",
+			"angular": "<mimic-alert title=\"Profile updated\">Your changes have been saved.</mimic-alert>",
+			"vue": "<Alert title=\"Profile updated\">Your changes have been saved.</Alert>",
+			"react-native": "<Alert title=\"Profile updated\">Your changes have been saved.</Alert>"
+		}
+	},
+	{
+		"name": "avatar",
+		"title": "Avatar",
+		"category": "Display",
+		"description": "Profile image with fallback and grouping primitives.",
+		"exports": "Avatar, AvatarImage, AvatarFallback",
+		"preview": "<div class='sample-avatar'>KM</div>",
+		"snippets": {
+			"react": "import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';\n\n<Avatar><AvatarImage src=\"/profile.png\" /><AvatarFallback>KM</AvatarFallback></Avatar>",
+			"angular": "<mimic-avatar initials=\"KM\"></mimic-avatar>",
+			"vue": "<Avatar initials=\"KM\" />",
+			"react-native": "<Avatar initials=\"KM\" />"
+		}
+	},
+	{
+		"name": "badge",
+		"title": "Badge",
+		"category": "Display",
+		"description": "Compact label with emphasis variants and counters.",
+		"exports": "Badge, CounterBadge",
+		"preview": "<span class='sample-badge'>Active</span>",
+		"snippets": {
+			"react": "import { Badge } from '@/components/ui/badge';\n\n<Badge variant=\"success\">Active</Badge>",
+			"angular": "<mimic-badge label=\"Active\"></mimic-badge>",
+			"vue": "<Badge label=\"Active\" />",
+			"react-native": "<Badge label=\"Active\" />"
+		}
+	},
+	{
+		"name": "button",
+		"title": "Button",
+		"category": "Actions",
+		"description": "Primary, secondary, outline, icon, and loading states.",
+		"exports": "Button, buttonVariants",
+		"preview": "<button class='sample-button'>Continue <span>→</span></button>",
+		"snippets": {
+			"react": "import { Button } from '@/components/ui/button';\n\n<Button variant=\"default\" size=\"default\">Continue</Button>",
+			"angular": "<mimic-button>Continue</mimic-button>",
+			"vue": "<Button>Continue</Button>",
+			"react-native": "<Button label=\"Continue\" onPress={handleContinue} />"
+		}
+	},
+	{
+		"name": "card",
+		"title": "Card",
+		"category": "Layout",
+		"description": "Composable surface with header, body, and footer slots.",
+		"exports": "Card, CardHeader, CardTitle, CardContent, CardFooter",
+		"preview": "<div class='sample-card'><b>Workspace</b><span>Design system overview</span><button>Open workspace →</button></div>",
+		"snippets": {
+			"react": "import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';\n\n<Card><CardHeader><CardTitle>Workspace</CardTitle></CardHeader><CardContent>Design system overview</CardContent></Card>",
+			"angular": "<mimic-card title=\"Workspace\" description=\"Design system overview\"></mimic-card>",
+			"vue": "<Card title=\"Workspace\" description=\"Design system overview\" />",
+			"react-native": "<Card label=\"Workspace\">Design system overview</Card>"
+		}
+	},
+	{
+		"name": "checkbox",
+		"title": "Checkbox",
+		"category": "Forms",
+		"description": "Accessible checked and indeterminate control.",
+		"exports": "Checkbox",
+		"preview": "<label class='sample-check'><span>✓</span> Remember this device</label>",
+		"snippets": {
+			"react": "import { Checkbox } from '@/components/ui/checkbox';\n\n<Checkbox id=\"remember\" checked />\n<label htmlFor=\"remember\">Remember this device</label>",
+			"angular": "<mimic-checkbox label=\"Remember this device\" [checked]=\"true\"></mimic-checkbox>",
+			"vue": "<Checkbox v-model:checked=\"remember\" label=\"Remember this device\" />",
+			"react-native": "<Checkbox label=\"Remember this device\" checked />"
+		}
+	},
+	{
+		"name": "dialog",
+		"title": "Dialog",
+		"category": "Overlays",
+		"description": "Modal surface with trigger, title, and description.",
+		"exports": "Dialog, DialogTrigger, DialogContent, DialogTitle",
+		"preview": "<div class='sample-dialog'><b>Leave this page?</b><span>Your changes may not be saved.</span><button>Stay here</button></div>",
+		"snippets": {
+			"react": "import { Dialog, DialogContent, DialogTitle, DialogTrigger } from '@/components/ui/dialog';\n\n<Dialog><DialogTrigger>Open dialog</DialogTrigger><DialogContent><DialogTitle>Leave this page?</DialogTitle></DialogContent></Dialog>",
+			"angular": "<mimic-dialog title=\"Leave this page?\" [open]=\"isOpen\"></mimic-dialog>",
+			"vue": "<Dialog title=\"Leave this page?\" :open=\"isOpen\" />",
+			"react-native": "<Dialog title=\"Leave this page?\" open onPress={closeDialog} />"
+		}
+	},
+	{
+		"name": "dropdown-menu",
+		"title": "Dropdown menu",
+		"category": "Overlays",
+		"description": "Anchored action list with selection and shortcut slots.",
+		"exports": "DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem",
+		"preview": "<div class='sample-menu'><button>More actions⌄</button><div><span>Edit details</span><span>Duplicate</span><span>Archive</span></div></div>",
+		"snippets": {
+			"react": "import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';\n\n<DropdownMenu><DropdownMenuTrigger>More actions</DropdownMenuTrigger><DropdownMenuContent><DropdownMenuItem>Edit details</DropdownMenuItem></DropdownMenuContent></DropdownMenu>",
+			"angular": "<mimic-dropdown-menu label=\"More actions\"></mimic-dropdown-menu>",
+			"vue": "<DropdownMenu label=\"More actions\" />",
+			"react-native": "<DropdownMenu label=\"More actions\" />"
+		}
+	},
+	{
+		"name": "input",
+		"title": "Input",
+		"category": "Forms",
+		"description": "Single-line text field with validation states.",
+		"exports": "Input",
+		"preview": "<label class='sample-field'><small>Email address</small><input value='hello@example.com' /></label>",
+		"snippets": {
+			"react": "import { Input } from '@/components/ui/input';\n\n<Input type=\"email\" placeholder=\"name@example.com\" />",
+			"angular": "<input mimic-input type=\"email\" placeholder=\"name@example.com\">",
+			"vue": "<Input type=\"email\" placeholder=\"name@example.com\" />",
+			"react-native": "<Input placeholder=\"name@example.com\" keyboardType=\"email-address\" />"
+		}
+	},
+	{
+		"name": "label",
+		"title": "Label",
+		"category": "Forms",
+		"description": "Form label with required state.",
+		"exports": "Label",
+		"preview": "<label class='sample-label'>Workspace name <i>Required</i></label>",
+		"snippets": {
+			"react": "import { Label } from '@/components/ui/label';\n\n<Label htmlFor=\"workspace\">Workspace name</Label>",
+			"angular": "<mimic-label label=\"Workspace name\" [required]=\"true\"></mimic-label>",
+			"vue": "<Label label=\"Workspace name\" required />",
+			"react-native": "<Label label=\"Workspace name\" required />"
+		}
+	},
+	{
+		"name": "loader",
+		"title": "Loader",
+		"category": "Feedback",
+		"description": "Spinner with compact, centered, and labeled states.",
+		"exports": "Loader, Spinner",
+		"preview": "<div class='sample-loader'><span></span><span>Loading workspace…</span></div>",
+		"snippets": {
+			"react": "import { Loader } from '@/components/ui/loader';\n\n<Loader label=\"Loading workspace…\" description=\"This may take a moment.\" />",
+			"angular": "<mimic-loader label=\"Loading workspace…\"></mimic-loader>",
+			"vue": "<Loader label=\"Loading workspace…\" />",
+			"react-native": "<Loader label=\"Loading workspace…\" />"
+		}
+	},
+	{
+		"name": "pagination",
+		"title": "Pagination",
+		"category": "Navigation",
+		"description": "Page controls with current-page state.",
+		"exports": "Pagination",
+		"preview": "<div class='sample-pagination'><button>‹</button><button>1</button><button class='selected'>2</button><button>3</button><button>›</button></div>",
+		"snippets": {
+			"react": "import { Pagination } from '@/components/ui/pagination';\n\n<Pagination page={2} totalPages={8} onPageChange={setPage} />",
+			"angular": "<mimic-pagination [page]=\"2\"></mimic-pagination>",
+			"vue": "<Pagination v-model:page=\"page\" />",
+			"react-native": "<Pagination label=\"2 of 8\" />"
+		}
+	},
+	{
+		"name": "select",
+		"title": "Select",
+		"category": "Forms",
+		"description": "Grouped option selector with a clear trigger state.",
+		"exports": "Select, SelectTrigger, SelectValue, SelectContent, SelectItem",
+		"preview": "<label class='sample-field'><small>Team</small><button class='sample-select'>Product design <span>⌄</span></button></label>",
+		"snippets": {
+			"react": "import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';\n\n<Select><SelectTrigger><SelectValue placeholder=\"Select a team\" /></SelectTrigger><SelectContent><SelectItem value=\"design\">Design</SelectItem></SelectContent></Select>",
+			"angular": "<mimic-select><option>Design</option><option>Engineering</option></mimic-select>",
+			"vue": "<Select><option>Design</option><option>Engineering</option></Select>",
+			"react-native": "<Select label=\"Design\" onPress={openOptions} />"
+		}
+	},
+	{
+		"name": "separator",
+		"title": "Separator",
+		"category": "Layout",
+		"description": "Horizontal or vertical divider with variants.",
+		"exports": "Separator",
+		"preview": "<div class='sample-separator'><span>OR CONTINUE WITH</span></div>",
+		"snippets": {
+			"react": "import { Separator } from '@/components/ui/separator';\n\n<Separator className=\"my-6\" />",
+			"angular": "<mimic-separator></mimic-separator>",
+			"vue": "<Separator />",
+			"react-native": "<Separator />"
+		}
+	},
+	{
+		"name": "skeleton",
+		"title": "Skeleton",
+		"category": "Feedback",
+		"description": "Loading placeholder for content and avatars.",
+		"exports": "Skeleton",
+		"preview": "<div class='sample-skeleton'><i></i><span><b></b><b></b></span></div>",
+		"snippets": {
+			"react": "import { Skeleton } from '@/components/ui/skeleton';\n\n<Skeleton className=\"h-4 w-48\" />",
+			"angular": "<mimic-skeleton width=\"180px\" height=\"16px\"></mimic-skeleton>",
+			"vue": "<Skeleton width=\"180px\" height=\"16px\" />",
+			"react-native": "<Skeleton width={180} height={16} />"
+		}
+	},
+	{
+		"name": "table",
+		"title": "Table",
+		"category": "Data display",
+		"description": "Composable table with sortable header primitives.",
+		"exports": "Table, TableHeader, TableBody, TableHead, TableRow, TableCell",
+		"preview": "<div class='sample-table'><div><b>Project</b><b>Status</b></div><div><span>Website refresh</span><em>In progress</em></div><div><span>Mobile app</span><em>Review</em></div></div>",
+		"snippets": {
+			"react": "import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';\n\n<Table><TableHeader><TableRow><TableHead>Project</TableHead></TableRow></TableHeader><TableBody>...</TableBody></Table>",
+			"angular": "<mimic-table></mimic-table>",
+			"vue": "<Table />",
+			"react-native": "<Table label=\"Website refresh\" />"
+		}
+	},
+	{
+		"name": "tabs",
+		"title": "Tabs",
+		"category": "Navigation",
+		"description": "Tabbed navigation with selected panel.",
+		"exports": "Tabs, TabsList, TabsTrigger, TabsContent",
+		"preview": "<div class='sample-tabs'><div><b>Overview</b><span>Members</span><span>Settings</span></div><p>Overview content for this workspace.</p></div>",
+		"snippets": {
+			"react": "import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';\n\n<Tabs defaultValue=\"overview\"><TabsList><TabsTrigger value=\"overview\">Overview</TabsTrigger></TabsList><TabsContent value=\"overview\">Overview content</TabsContent></Tabs>",
+			"angular": "<mimic-tabs></mimic-tabs>",
+			"vue": "<Tabs :tabs=\"['Overview', 'Members', 'Settings']\" />",
+			"react-native": "<Tabs label=\"Overview\" />"
+		}
+	},
+	{
+		"name": "tag",
+		"title": "Tag",
+		"category": "Display",
+		"description": "Removable label for filters and selected values.",
+		"exports": "Tag",
+		"preview": "<span class='sample-tag'>Design system <button>×</button></span>",
+		"snippets": {
+			"react": "import { Tag } from '@/components/ui/tag';\n\n<Tag removable onRemove={clearFilter}>Design system</Tag>",
+			"angular": "<mimic-tag label=\"Design system\" [removable]=\"true\"></mimic-tag>",
+			"vue": "<Tag label=\"Design system\" removable @remove=\"clearFilter\" />",
+			"react-native": "<Tag label=\"Design system\" removable onPress={clearFilter} />"
+		}
+	},
+	{
+		"name": "textarea",
+		"title": "Textarea",
+		"category": "Forms",
+		"description": "Multiline field with optional character count.",
+		"exports": "Textarea",
+		"preview": "<label class='sample-field'><small>Project notes</small><textarea placeholder='Add a few details…'></textarea><i>0 / 240</i></label>",
+		"snippets": {
+			"react": "import { Textarea } from '@/components/ui/textarea';\n\n<Textarea placeholder=\"Add a few details…\" maxLength={240} showCount />",
+			"angular": "<mimic-textarea [maxLength]=\"240\" [showCount]=\"true\"></mimic-textarea>",
+			"vue": "<Textarea :max-length=\"240\" show-count />",
+			"react-native": "<Textarea label=\"Add a few details…\" onChangeText={setNotes} />"
+		}
+	},
+	{
+		"name": "toast",
+		"title": "Toast",
+		"category": "Feedback",
+		"description": "Dismissible status notice with live announcements.",
+		"exports": "Toast, Toaster, toast",
+		"preview": "<div class='sample-toast'><b>✓</b><span><strong>Changes saved</strong><small>Your workspace is up to date.</small></span><button>×</button></div>",
+		"snippets": {
+			"react": "import { Toaster, toast } from '@/components/ui/toast';\n\ntoast.success(\"Changes saved\");\n<Toaster />",
+			"angular": "<mimic-toast title=\"Changes saved\">Your workspace is up to date.</mimic-toast>",
+			"vue": "<Toast title=\"Changes saved\">Your workspace is up to date.</Toast>",
+			"react-native": "<Toast label=\"Changes saved\">Your workspace is up to date.</Toast>"
+		}
+	}
+]

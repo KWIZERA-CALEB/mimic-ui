@@ -13,7 +13,11 @@ importers:
 
     apps/docs: {}
 
-    packages/cli: {}
+    packages/cli:
+        dependencies:
+            typescript:
+                specifier: ^5.9.3
+                version: 5.9.3
 
 packages:
     prettier@3.9.10:
@@ -24,5 +28,15 @@ packages:
         engines: { node: '>=14' }
         hasBin: true
 
+    typescript@5.9.3:
+        resolution:
+            {
+                integrity: sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw==,
+            }
+        engines: { node: '>=14.17' }
+        hasBin: true
+
 snapshots:
     prettier@3.9.10: {}
+
+    typescript@5.9.3: {}
